@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Profile</ion-title>
   </ion-navbar>
 
@@ -14,5 +14,13 @@
 
 
 <ion-content padding>
-
+    <ion-item>        
+        <ion-label floating>Sexo</ion-label>
+        <ion-select [(ngModel)]="profile.sexo" formControlName="sexo"  required >
+          <ion-option value="1">Masculino</ion-option>
+          <ion-option value="2">Femenino</ion-option>
+    
+        </ion-select>
+      </ion-item>
+<button ion-button clear block (click)="createProfile()" >Create Profile</button>
 </ion-content>

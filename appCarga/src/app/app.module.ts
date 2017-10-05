@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { ProfilePage } from '../pages/profile/profile';
+
 
 //PLUGGIN
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -20,6 +22,8 @@ import { HttpModule } from '@angular/http';
 
 //DB
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+//import { AngularFireDatabase} from 'angularfire2/database';
+
 
 var firebaseAuth  = {
   apiKey: "AIzaSyCDLDZtnlim-MHyW30KYNN1jLiMjB6t-tI",
@@ -35,7 +39,8 @@ var firebaseAuth  = {
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,8 @@ var firebaseAuth  = {
     MyApp,
     HomePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

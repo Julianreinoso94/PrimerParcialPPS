@@ -7,6 +7,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { ProfilePage } from '../pages/profile/profile';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { RegisterPage } from '../pages/register/register';
 export class MyApp {
  
   @ViewChild(Nav) nav: Nav;
-  rootPage:any;
+  rootPage:any=ProfilePage;
   pages: Array<{title: string, component: any}>
 
 //rootPage:any = HomePage;
@@ -31,13 +32,13 @@ export class MyApp {
       splashScreen.hide();
     });
         const authObserver = this.AfA.authState.subscribe( user => {
-        if (user) {
+      /* if (user) {
           this.rootPage = HomePage;
           authObserver.unsubscribe();
         } else {
           this.rootPage = LoginPage;
           authObserver.unsubscribe();
-        }
+        }*/
       });    
 
    this.pages = [

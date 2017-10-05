@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="name" #username></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="pass" #password></ion-input>
+  </ion-item>
+  
+</ion-list>
+
+<div padding>
+  <button block ion-button (click)="signInUser()" item-left>Sign In</button>
+</div>
+ <button ion-button block clear class="btnRegistro" (click)="register()">
+          Crear una Cuenta
+        </button>
+
+
+
+<button ion-button  block color="secondary" small icon-start (click)="administrador()"> <ion-icon icon-start name="person"></ion-icon>Administrador</button>
+<button ion-button  block color="secondary" small icon-start (click)="usuario()"> <ion-icon icon-start name="star"></ion-icon>Usuario</button>
+<button ion-button  block color="secondary" small icon-start (click)="invitado()"> <ion-icon icon-start name="ios-man"></ion-icon>Invitado</button>
+<button ion-button  block color="secondary" small icon-start (click)="jugador1()"> <ion-icon icon-start name="ios-happy"></ion-icon>Jugador1</button>
+<button ion-button  block color="secondary" small icon-start (click)="jugador2()"> <ion-icon icon-start name="md-happy"></ion-icon>Jugador2</button>
+
+
+
+</ion-content>
